@@ -1,0 +1,335 @@
+/* ===== RESET Y BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    color: #f0e6d2;
+    background-color: #f3e5f5;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('imagenes/fondo.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* ===== SOBRE INICIAL ===== */
+#envelope-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 5, 15, 0.85);
+    backdrop-filter: blur(4px);
+    z-index: 100;
+    transition: opacity 0.6s ease, visibility 0.6s;
+    cursor: pointer;
+}
+
+#envelope-container p {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #ebc87e;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.envelope-image {
+    max-width: 400px;
+    width: 80%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.6), 0 0 0 2px rgba(212, 175, 55, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 2.5s infinite ease-in-out;
+    display: block;
+}
+
+.envelope-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 50px rgba(212, 175, 55, 0.3);
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+#main-content {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#main-content section {
+    flex: 1 1 300px;
+    min-width: 280px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.card {
+    max-width: 650px;
+    width: 100%;
+    background: rgba(20, 10, 25, 0.3);
+    backdrop-filter: blur(3px);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #ebc87e;
+    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    text-shadow: none;
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.nombre {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #f3d9a0;
+    margin: 0.5rem 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.detalle, .mensaje-italica {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #e2d5c0;
+    margin: 1.2rem 0;
+    max-width: 500px;
+}
+
+.decorative-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ebc87e, transparent);
+    margin: 1.5rem auto 0;
+}
+
+/* ===== SECCIÓN DE FECHA ELEGANTE ===== */
+.fecha-card .fecha-elegante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.fecha-elegante .mes {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    color: #ebc87e;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.fecha-elegante .dia-semana {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #d4af37;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.fecha-elegante .dia-grande {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    font-weight: 400;
+    color: #f3d9a0;
+    line-height: 1;
+    margin: 0.2rem 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    position: relative;
+    display: inline-block;
+}
+
+.fecha-elegante .dia-grande::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ebc87e, #d4af37, #ebc87e, transparent);
+    border-radius: 2px;
+}
+
+.fecha-elegante .año {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    color: #ebc87e;
+    margin-top: 0.3rem;
+}
+
+.hora-lugar {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #e2d5c0;
+    margin: 1rem 0 0.5rem;
+}
+
+/* ===== CONTADOR REGRESIVO ===== */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.countdown-numero {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #ebc87e;
+    line-height: 1.2;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.3rem 0.5rem;
+    border-radius: 8px;
+    min-width: 70px;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.countdown-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #d4af37;
+    margin-top: 0.3rem;
+}
+
+.rsvp {
+    font-size: 1.1rem;
+    background: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 30px;
+    padding: 0.5rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #f3d9a0;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.rsvp a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.whatsapp-float i {
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float i:hover {
+    transform: scale(1.1);
+}
+
+/* ===== ESTILOS PARA MÓVILES ===== */
+@media (max-width: 700px) {
+    #main-content {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+        height: 100vh;
+    }
+
+    #main-content section {
+        min-width: 100%;
+        width: 100%;
+        height: 100vh;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        padding: 1.5rem 1rem;
+    }
+
+    h1 { font-size: 2rem; letter-spacing: 4px; }
+    .nombre { font-size: 3rem; }
+    h2 { font-size: 1.6rem; }
+    .detalle, .mensaje-italica { font-size: 1.1rem; }
+    .card { padding: 1.5rem 1rem; }
+
+    .fecha-elegante .dia-grande {
+        font-size: 4.5rem;
+    }
+    .fecha-elegante .año {
+        font-size: 1.2rem;
+    }
+
+    .countdown-numero {
+        font-size: 1.8rem;
+        min-width: 55px;
+    }
+    .countdown-container {
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 { font-size: 1.8rem; }
+    .nombre { font-size: 2.5rem; }
+    .card { padding: 1rem; }
+    .fecha-elegante .dia-grande {
+        font-size: 3.5rem;
+    }
+    .countdown-numero {
+        font-size: 1.5rem;
+        min-width: 45px;
+    }
+}

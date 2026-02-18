@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación 15 Años</title>
+    <!-- Fuentes elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (gratuito) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+    <audio id="musicaFondo" autoplay loop>
+        <source src="audio.m4a" type="audio/mpeg">
+    </audio>
+
+    <!-- SOBRE CON IMAGEN (ruta: imagenes/sobre.png) -->
+    <div id="envelope-container" tabindex="0" role="button" aria-label="Abrir invitación">
+        <p>Te invito a celebrar<br>este día tan especial.</p>
+        <img src="imagenes/sobre.png" alt="Abrir invitación" class="envelope-image">
+    </div>
+
+    <main id="main-content">
+        <section id="section1">
+            <div class="card">
+                <h1>15 años</h1>
+                <div class="nombre">Valeria Valentina</div>
+                <p class="detalle">Te invito a celebrar<br>este día tan especial.</p>
+                <div class="decorative-line"></div>
+            </div>
+        </section>
+
+        <section id="section2">
+            <div class="card">
+                <h2>Mensaje</h2>
+                <p class="mensaje-italica">La vida no se mide por las veces que respiras, sino por los momentos que te dejan sin aliento.</p>
+                <p class="mensaje-italica">Hoy llego a mis quince años con el corazón lleno de gratitud, sabiendo que soy el resultado del amor de mi familia y la alegría de mis amigos.</p>                    
+                <p class="mensaje-italica">Porque tú has formado parte de mi historia y has compartido mis risas, no puedo imaginar esta noche sin ti. Te espero para celebrar la vida, el amor y este nuevo comienzo.</p>
+            </div>
+        </section>
+
+        <section id="section3">
+            <div class="card fecha-card">
+                <h2>Fecha</h2>
+                <div class="fecha-elegante">
+                    <span class="mes">Marzo</span>
+                    <div class="dia-semana">Sábado</div>
+                    <div class="dia-grande">28</div>
+                    <div class="año">2026</div>
+                </div>
+                <p class="hora-lugar">A las 14:00 hrs. en Salón de Eventos "El Jardín"</p>
+                
+                <!-- CONTADOR REGRESIVO -->
+                <div class="countdown-container">
+                    <div class="countdown-item">
+                        <span class="countdown-numero" id="dias">00</span>
+                        <span class="countdown-label">Días</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-numero" id="horas">00</span>
+                        <span class="countdown-label">Horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-numero" id="minutos">00</span>
+                        <span class="countdown-label">Minutos</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-numero" id="segundos">00</span>
+                        <span class="countdown-label">Segundos</span>
+                    </div>
+                </div>
+
+                <div class="rsvp">
+                    Confirmar tu asistencia: 
+                    <a href="https://w.app/lmpuha" class="whatsapp-float" target="_blank">
+                        <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.8rem; vertical-align: middle;"></i>
+                    </a>
+                </div>
+                <p class="detalle" style="border-top: 1px solid rgba(212,175,55,0.3); padding-top: 1.5rem;">
+                    Te esperamos.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div id="player"></div>
+
+    <script src="funciones.js"></script>
+</body>
+</html>
