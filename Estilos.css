@@ -512,3 +512,104 @@ section {
 .btn-rsvp:hover {
     transform: translateY(-3px);
 }
+
+/* ===== ESTILOS PALETA DE COLORES ===== */
+.reserved-colors {
+    margin-top: 25px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.reserved-colors p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: #ebc87e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.color-box {
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    border: 2px solid rgba(235, 200, 126, 0.4);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+}
+
+.detalle-mini {
+    font-size: 0.8rem !important;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Ajuste para que las 4 fotos queden en una fila o cuadrícula pequeña */
+.image-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.image-grid img {
+    width: 70px; /* Un poco más pequeñas para que quepan las 4 */
+    height: 100px;
+}
+
+/* ===== ESTILOS DE LA PALETA DE COLORES ===== */
+.reserved-colors-section {
+    margin-top: 30px;
+    padding: 15px;
+    border-top: 1px solid rgba(235, 200, 126, 0.2);
+}
+
+.paleta-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ebc87e;
+    margin-bottom: 15px;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.color-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Los hace redondos y elegantes */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Ajuste para que las fotos de referencia no ocupen tanto espacio */
+.image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.image-grid img {
+    width: 80px;
+    height: 110px;
+    border-radius: 5px;
+}
